@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"
+type="text/javascript"></script>
+<script type="text/javascript"> 
+ymaps.ready(init);  
+function init() { 
+var myMap = new ymaps.Map('map', { 
+center: [ -25.30, -57.60 ], 
+zoom: 10           
+ }),
+ myPolygon = new ymaps.Polygon([[
+
+[-25.24,-57.64],
+[-25.24,-57.54],
+[-25.30,-57.50],
+[-25.37,-57.54],
+[-25.37,-57.63],
+[-25.30,-57.67]
+]]);
+  
+myMap.geoObjects.add(myPolygon).add(myPolygon); 
+}     
+</script> 
+</head>  
+<body> 
+<div id="map" style="width:300px;height:300px"></div> </body>  
+</html> 
